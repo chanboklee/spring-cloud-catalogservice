@@ -29,4 +29,8 @@ public class CatalogEntity {
     @Column(nullable = false, updatable = false, insertable = false)
     @ColumnDefault(value = "CURRENT_TIMESTAMP")
     private LocalDateTime createAt;
+    
+    public void updateQty(Integer qty){
+        this.stock = stock - qty;
+    }
 }
